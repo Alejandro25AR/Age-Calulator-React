@@ -1,0 +1,13 @@
+@use '../config/variables';
+
+.u-border-color-violet {
+  border-color: variables.$accent-color;
+}
+
+.u-border-color-red {
+  border-color: variables.$error-color;
+}
+
+.u-border-color-gray {
+  border-color: variables.$neutral-color-gray
+}

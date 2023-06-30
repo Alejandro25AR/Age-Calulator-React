@@ -1,0 +1,36 @@
+@use 'sass:math';
+@use 'base-font-size' as bfs;
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/poppins/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/poppins/Poppins-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+$font-family: "Poppins";
+
+$fs-12: #{math.div(12,bfs.$size)+'rem'};
+$fs-16: #{math.div(16,bfs.$size)+'rem'};
+$fs-20: #{math.div(20,bfs.$size)+'rem'};
+$fs-24: #{math.div(24,bfs.$size)+'rem'};
+$fs-56: #{math.div(56,bfs.$size)+'rem'};
+$fs-88: #{math.div(88,bfs.$size)+'rem'};
+
+$fs-span-mobile-s: $fs-12;
+$fs-span-mobile-n: $fs-16;
+$fs-span-mobile-m: $fs-20;
+$fs-span-mobile-l: $fs-56;

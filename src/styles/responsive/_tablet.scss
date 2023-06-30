@@ -1,0 +1,12 @@
+@use '@/components/templates/responsive' as *;
+@use '@/components/atoms/responsive' as *;
+@use '@/components/organisms/responsive' as *;
+
+@media screen and (min-width: 704px) {
+  // Atoms
+  @include FieldTablet;
+  @include SpanTablet;
+  // Templates
+  @include ContainerCalculateAgeTablet;
+  @include FormTablet;
+}

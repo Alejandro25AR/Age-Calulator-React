@@ -1,0 +1,12 @@
+@use '../config/variables';
+
+body {
+  padding: 0;
+
+  font-family: variables.$font-family;
+  font-weight: 700;
+
+  background-color: variables.$primary-color;
+
+  overflow-x: hidden;
+}

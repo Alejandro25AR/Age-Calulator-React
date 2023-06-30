@@ -1,0 +1,23 @@
+// Reset
+@use 'reset';
+
+// Elements
+@use 'elements';
+
+// Atoms
+@use '@/components/atoms';
+
+// Molecules
+@use '@/components/molecules';
+
+// Organisms
+@use '@/components/organisms';
+
+// Templates
+@use '@/components/templates'; 
+
+// Utilities
+@use 'utilities';
+
+// Responsive
+@use 'responsive/tablet';
