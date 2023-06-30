@@ -1,0 +1,26 @@
+@use '../../../styles/config/variables';
+
+.a-input {
+  & {
+    display: inline-block;
+    width: 100%;
+    padding: variables.$size-8 variables.$size-12;
+
+    font-size: variables.$fs-20;
+    text-transform: capitalize;
+  }
+
+  &--with-border {
+    @extend .a-input;
+    border: 2px solid gray;
+    border-radius: 4px;
+
+    &:focus {
+      border-color: variables.$accent-color;
+    }
+
+    &:invalid {
+      border-color: variables.$error-color;
+    }
+  }
+}

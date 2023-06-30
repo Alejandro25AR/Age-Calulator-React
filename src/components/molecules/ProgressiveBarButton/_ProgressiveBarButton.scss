@@ -1,0 +1,58 @@
+@use '../../../styles/config/variables';
+
+.m-progressive-bar-btn {
+  & {
+    position: relative;
+    
+    display: block;
+    overflow: hidden;
+    padding: variables.$size-12 variables.$size-32;
+
+    font-size: variables.$fs-20;
+
+    background-color: variables.$secondary-color;
+    border-radius: variables.$radius-8;
+    border: 2px solid variables.$accent-color;
+    
+    &:disabled {
+      &:active {
+        & {
+          border-color: variables.$neutral-color-gray;
+        }
+        & span {
+          color: variables.$neutral-color-gray;
+        }
+        & div{
+          background-color: variables.$progressive-bar-color;
+        }
+      }
+    }
+
+    &:active {
+      & span {
+        color: variables.$secondary-color;
+      }
+      & div {
+        background-color: variables.$neutral-color-black;
+      }
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 102%;
+    height: 100%;
+
+    background-color: variables.$progressive-bar-color;
+
+    transition: transform .5s ease;
+    transform: translateX(-100%);
+  }
+
+  & span {
+    position: relative;
+  }
+}

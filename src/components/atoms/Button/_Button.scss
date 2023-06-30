@@ -1,0 +1,33 @@
+@use '../../../styles/config/variables';
+
+.a-btn {
+  & {
+    padding: variables.$size-12 variables.$size-32;
+
+    font-size: variables.$fs-20;
+
+    background-color: variables.$secondary-color;
+    border-radius: variables.$radius-8;
+    border: 2px solid variables.$accent-color;
+
+    &:active {
+      color: variables.$secondary-color;
+
+      background-color: variables.$neutral-color-black;
+      border-color: variables.$neutral-color-black;
+    }
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    line-height: 0;
+
+    border-radius: variables.$radius-4;
+    background-color: variables.$neutral-color-gray;
+  }
+}

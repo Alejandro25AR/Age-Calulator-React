@@ -1,0 +1,12 @@
+@use '../../../styles/config/variables';
+
+.a-popup {
+  & {
+    position: absolute;
+    z-index: variables.$z-5;
+    right: 0;
+    left: 0;
+
+    display: none;
+  }
+}

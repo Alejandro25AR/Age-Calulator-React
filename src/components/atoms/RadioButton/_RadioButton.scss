@@ -1,0 +1,33 @@
+@use '../../../styles/config/variables';
+
+.a-radio-btn {
+  display: none;
+
+  & + label {
+    display: block;
+    padding: variables.$size-12 variables.$size-16;
+
+    text-transform: capitalize;
+    text-align: center;
+    font-size: variables.$fs-16;
+
+    border: 2px solid variables.$neutral-color-gray;
+    border-radius: variables.$radius-8;
+    background-color: variables.$secondary-color;
+  }
+
+  &:checked + label {
+    color: variables.$secondary-color;
+
+    border-color: variables.$accent-color;
+    background-color: variables.$accent-color;
+  }
+
+  &--small + label{
+    padding: variables.$size-4;
+
+    font-size: variables.$fs-16;
+    
+    border-radius: variables.$radius-4;
+  }
+}

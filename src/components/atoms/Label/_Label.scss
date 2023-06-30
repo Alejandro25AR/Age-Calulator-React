@@ -1,0 +1,14 @@
+@use '../../../styles/config/variables';
+
+.a-label {
+  font-size: variables.$fs-12;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: variables.$neutral-color-dark-gray;
+}
+
+@mixin LabelTablet {
+  .a-label {
+    
+  }
+}

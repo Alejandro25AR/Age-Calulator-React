@@ -1,0 +1,71 @@
+@use '../../../styles/config/variables';
+
+.a-span {
+  & {
+    font-size: variables.$fs-span-mobile-n;
+    color: variables.$neutral-color-black;
+  }
+
+  &--purple {
+    @extend .a-span;
+    color: variables.$accent-color;
+  }
+
+  &--red {
+    @extend .a-span;
+    color: variables.$error-color;
+  }
+
+  &--small {
+    @extend .a-span;
+    font-size: variables.$fs-span-mobile-s;
+  }
+
+  &--medium {
+    @extend .a-span;
+    font-size: variables.$fs-span-mobile-m;
+  }
+
+  &--medium-bold {
+    @extend .a-span;
+    font-weight: 700;
+    font-size: variables.$fs-span-mobile-m;
+  }
+
+  &--small-red {
+    font-size: variables.$fs-span-mobile-s;
+    color: variables.$error-color;
+  }
+
+  &--giant {
+    @extend .a-span;
+    font-size: variables.$fs-span-mobile-l;
+  }
+
+  &--giant-italic {
+    @extend .a-span;
+    font-style: italic;
+    font-size: variables.$fs-span-mobile-l;
+  }
+
+  &--giant-purple {
+    font-size: variables.$fs-span-mobile-l;
+    color: variables.$accent-color;
+  }
+}
+
+@mixin SpanTablet {
+  .a-span {
+    &--giant {
+      font-size: variables.$fs-88;
+    }
+  
+    &--giant-italic {
+      font-size: variables.$fs-88;
+    }
+  
+    &--giant-purple {
+      font-size: variables.$fs-88;
+    }
+  }
+}

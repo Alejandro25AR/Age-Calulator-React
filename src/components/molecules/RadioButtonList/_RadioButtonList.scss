@@ -1,0 +1,24 @@
+@use '../../../styles/config/variables';
+
+.m-radio-btn-list {
+  & {
+    display: grid;
+    gap: variables.$size-8;
+    
+    padding: variables.$size-8;
+    
+    background-color: variables.$secondary-color;
+    border: 2px solid variables.$neutral-color-gray;
+    border-radius: variables.$radius-8;
+  }
+
+  &--3-column {
+    @extend .m-radio-btn-list;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  &--7-column {
+    @extend .m-radio-btn-list;
+    grid-template-columns: repeat(7,1fr);
+  }
+}

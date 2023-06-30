@@ -1,0 +1,16 @@
+@use '../../../styles/config/variables';
+
+.m-input-group-btn {
+  & {
+    position: relative;
+
+    border: 2px solid variables.$neutral-color-gray;
+    border-radius: variables.$radius-4;
+  }
+
+  & .a-btn--icon {
+    position: absolute;
+    right: 10px;
+    top: 14px 
+  }
+}

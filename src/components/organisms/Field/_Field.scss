@@ -1,0 +1,29 @@
+@use '../../../styles/config/variables';
+
+.o-field {
+  position: relative;
+
+  margin-bottom: 1rem;
+
+  & > .m-input-group-btn,
+  & > input{
+    margin-top: variables.$size-12;
+    margin-bottom: variables.$size-8;
+  }
+
+  & > ol {
+    position:absolute;
+    align-self: center;
+  }
+
+  & span {
+    display: block;
+    position: absolute;
+  }
+}
+
+@mixin FieldTablet{
+  .o-field {
+    width: 8rem;
+  }
+}
