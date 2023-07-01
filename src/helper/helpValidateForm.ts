@@ -34,7 +34,7 @@ function helpValidateForm(form:IDate) {
     errorMessage.month = 'This field can not have number';
   } 
   else if(!regExpMonth.test(month)) {
-    console.log(month);
+    errorMessage.month = 'The month is not valid';
   }
 
   /* Validate field year */
