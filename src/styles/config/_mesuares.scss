@@ -1,6 +1,8 @@
 @use 'sass:math';
 @use 'base-font-size' as bfs;
 
+
+
 $size-4:  #{math.div(4,bfs.$size)+'rem'};
 $size-8:  #{math.div(8,bfs.$size)+'rem'};
 $size-12: #{math.div(12,bfs.$size)+'rem'};
@@ -10,9 +12,14 @@ $size-24: #{math.div(24,bfs.$size)+'rem'};
 $size-32: #{math.div(32,bfs.$size)+'rem'};
 $size-48: #{math.div(48,bfs.$size)+'rem'};
 $size-52: #{math.div(52,bfs.$size)+'rem'};
+$size-64: #{math.div(64,bfs.$size)+'rem'};
+$size-80: #{math.div(80,bfs.$size)+'rem'};
 $size-88: #{math.div(88,bfs.$size)+'rem'};
 
 $radius-4: #{math.div(4,bfs.$size)+'rem'};
 $radius-8: #{math.div(8,bfs.$size)+'rem'};
 $radius-32: #{math.div(22,bfs.$size)+'rem'};
 $radius-112: #{math.div(112,bfs.$size)+'rem'};
+
+$circle-normal: $size-64;
+$circle-large: $size-80;
