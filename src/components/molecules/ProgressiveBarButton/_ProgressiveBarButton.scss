@@ -6,15 +6,26 @@
     
     display: block;
     overflow: hidden;
-    padding: variables.$size-12 variables.$size-32;
+    width: variables.$circle-normal;
+    height: variables.$circle-normal;
 
-    font-size: variables.$fs-20;
+    line-height: 0;
 
     background-color: variables.$secondary-color;
-    border-radius: variables.$radius-8;
+    border-radius: 100%;
     border: 2px solid variables.$accent-color;
+    background-color: variables.$neutral-color-gray;
     
     &:disabled {
+      & {
+        border-color: variables.$neutral-color-dark-gray;
+        border-style: dashed;
+      }
+
+      & .m-progressive-bar-btn__bar {
+        background-color: variables.$progressive-bar-color;
+      }
+
       &:active {
         & {
           border-color: variables.$neutral-color-gray;
@@ -46,13 +57,15 @@
     width: 102%;
     height: 100%;
 
-    background-color: variables.$progressive-bar-color;
+    background-color: variables.$accent-color;
 
     transition: transform .5s ease;
-    transform: translateX(-100%);
+    transform: translateY(100%);
   }
 
-  & span {
+  & svg {
     position: relative;
+    width: variables.$size-24;
+    height: variables.$size-24;
   }
 }

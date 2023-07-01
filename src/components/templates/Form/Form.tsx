@@ -64,7 +64,7 @@ function Form() {
         />
       </div>
       <ProgressiveBarButton
-        content="Calculate Age"
+        icon="Arrow"
         handleClick={() => {}}
         fieldsValidate={fieldsValidate}
         fiedlNumber={3}

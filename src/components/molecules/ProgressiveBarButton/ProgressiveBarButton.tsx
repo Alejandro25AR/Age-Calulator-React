@@ -1,15 +1,15 @@
-import { Span } from "@/components/atoms";
+import { Icon } from "@/components/atoms";
 import { useMemo } from "react";
 
 interface Props {
-  content: string;
+  icon?: "Arrow";
   handleClick: () => void;
   fiedlNumber: number;
   fieldsValidate: number;
 }
 
 function ProgressiveBarButton({
-  content,
+  icon,
   handleClick,
   fieldsValidate = 0,
   fiedlNumber,
@@ -21,7 +21,7 @@ function ProgressiveBarButton({
   const percerntProgressBar =
     fieldsValidate - fiedlNumber === 0
       ? 0
-      : fieldsValidate * dividedPercent - 100;
+      : 100 - fieldsValidate * dividedPercent;
 
   return (
     <button
@@ -32,10 +32,10 @@ function ProgressiveBarButton({
       <div
         className="m-progressive-bar-btn__bar"
         style={{
-          transform: `translateX(${percerntProgressBar}%)`,
+          transform: `translateY(${percerntProgressBar}%)`,
         }}
       ></div>
-      <Span content={content} variant="medium-bold" />
+      {<Icon icon={icon} />}
     </button>
   );
 }
