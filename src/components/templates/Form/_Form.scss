@@ -13,7 +13,7 @@
     content: "";
     
     position: absolute;
-    bottom: variables.$size-24;
+    bottom: calc(variables.$circle-normal / 2);
     left: 0;
     z-index: variables.$z-1;
 
