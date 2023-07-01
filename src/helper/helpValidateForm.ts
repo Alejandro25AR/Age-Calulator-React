@@ -50,7 +50,6 @@ function helpValidateForm(form:IDate) {
   else if(Number(year) < 0 ) {
     errorMessage.year ='The year can not be negative';
   }
-  console.log(errorMessage);
 
   return errorMessage;
 }
