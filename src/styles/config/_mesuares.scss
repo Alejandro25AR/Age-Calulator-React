@@ -1,8 +1,6 @@
 @use 'sass:math';
 @use 'base-font-size' as bfs;
 
-
-
 $size-4:  #{math.div(4,bfs.$size)+'rem'};
 $size-8:  #{math.div(8,bfs.$size)+'rem'};
 $size-12: #{math.div(12,bfs.$size)+'rem'};
