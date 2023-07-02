@@ -9,8 +9,8 @@ import { MONTHS } from "@/constants";
  */
 
 function helpGetNumberMonth(month: string) {
-  const numberMonth = MONTHS.findIndex((nameMonth) => month.toLowerCase() === nameMonth.toLowerCase()) + 1;
-  return numberMonth;
+  const numberMonth = MONTHS.findIndex((nameMonth) => month.toLowerCase() === nameMonth.toLowerCase())
+  return numberMonth < 0 ? -1 : numberMonth+1;
 }
 
 export { helpGetNumberMonth };
