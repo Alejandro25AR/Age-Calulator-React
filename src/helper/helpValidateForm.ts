@@ -3,7 +3,6 @@ import { IDate, errorMessageEmpty } from "@/models";
 // Helpers
 import { helpGetDaysOfTheMonth, helpGetNumberMonth } from ".";
 
-const regExpMonth = /(Jan)|(Feb)|(Mar)|(Apr)|(May)|(Jun)|(Jul)|(Aug)|(Sep)|(Oct)|(Nov)|(Dec)/gi;
 const regExpNumbers =  /^[0-9]+$/;
 
 function helpValidateForm(form:IDate) {
@@ -33,7 +32,7 @@ function helpValidateForm(form:IDate) {
   else if(regExpNumbers.test(month)) {
     errorMessage.month = 'This field can not have number';
   } 
-  else if(!regExpMonth.test(month)) {
+  else if(helpGetNumberMonth(month)===-1) {
     errorMessage.month = 'The month is not valid';
   }
 
