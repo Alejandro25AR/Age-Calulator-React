@@ -1,5 +1,5 @@
 import { Button, Input } from "@/components/atoms";
-import { RefObject, useState } from "react";
+import { RefObject } from "react";
 
 interface Props {
   id: string;
