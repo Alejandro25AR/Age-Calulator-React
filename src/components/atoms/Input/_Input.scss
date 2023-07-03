@@ -24,3 +24,13 @@
     }
   }
 }
+
+@mixin InputTablet {
+  .a-input {
+    font-size: variables.$fs-28;
+
+    &--with-border {
+      font-size: variables.$fs-28;
+    }
+  }
+}
