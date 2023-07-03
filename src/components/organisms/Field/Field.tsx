@@ -52,6 +52,7 @@ function Field({
           value={value}
           maxlenght={maxLength}
           popup={popup}
+          inputMode={inputMode}
           refButton={refButtonTogglePopup}
           existError={errorMessage===""}
         />
@@ -65,6 +66,7 @@ function Field({
           handleChange={handleChange}
           maxlength={maxLength}
           existError={errorMessage===""}
+          inputMode={inputMode}
         />
       )}
 
