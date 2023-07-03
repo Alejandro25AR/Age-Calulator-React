@@ -50,5 +50,16 @@
     &__fields { 
       width: 0;
     }
+
+    &::after {
+      bottom: - variables.$size-32;
+      z-index: variables.$z-1;
+    }
+
+    & > button {
+      position: absolute;
+      bottom: calc(((#{variables.$circle-large} / 2) + (#{variables.$size-32})) * -1);
+      right: 0;
+    }
   }
 }
