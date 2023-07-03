@@ -1,11 +1,14 @@
-@use '@/components/templates/responsive' as *;
 @use '@/components/atoms/responsive' as *;
+@use '@/components/molecules/responsive' as *;
 @use '@/components/organisms/responsive' as *;
+@use '@/components/templates/responsive' as *;
 
 @media screen and (min-width: 704px) {
   // Atoms
   @include FieldTablet;
   @include SpanTablet;
+  //Molecules
+  @include ProgressiveBarBtnTablet;
   // Templates
   @include ContainerCalculateAgeTablet;
   @include FormTablet;
