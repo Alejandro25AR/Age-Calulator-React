@@ -69,3 +69,10 @@
     height: variables.$size-24;
   }
 }
+
+@mixin ProgressiveBarBtnTablet {
+  .m-progressive-bar-btn {
+    width: variables.$circle-large;
+    height: variables.$circle-large;
+  }
+}
