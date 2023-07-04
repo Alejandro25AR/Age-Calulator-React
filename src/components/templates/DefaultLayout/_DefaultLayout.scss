@@ -8,5 +8,11 @@
   justify-content: center;
   align-items: center;
 
-  padding: 1rem;
+  padding: variables.$size-16;
+}
+
+@mixin DefaultLayoutTablet {
+  .t-default-layout {
+    padding: variables.$size-32;
+  }
 }
