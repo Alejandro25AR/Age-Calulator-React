@@ -23,11 +23,27 @@
     align-items: center;
     justify-content: center;
 
-    padding: 5px;
+    width: 18px;
+    height: 18px;
+    padding: 0;
 
     line-height: 0;
 
     border-radius: variables.$radius-4;
     background-color: variables.$neutral-color-gray;
+
+    & svg{
+      width: 45%;
+      height: auto;
+    }
+  }
+}
+
+@mixin ButtonTablet {
+  .a-btn {
+    &--icon {
+      width: 25px;
+      height: 25px; 
+    }
   }
 }
