@@ -69,3 +69,19 @@
     }
   }
 }
+
+@mixin SpanDesktop {
+  .a-span {
+    &--giant {
+      font-size: variables.$fs-102;
+    }
+  
+    &--giant-italic {
+      font-size: variables.$fs-102;
+    }
+  
+    &--giant-purple {
+      font-size: variables.$fs-102;
+    }
+  }
+}
