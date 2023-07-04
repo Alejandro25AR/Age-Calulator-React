@@ -14,3 +14,12 @@
     top: 14px 
   }
 }
+
+@mixin InputGroupBtnTablet {
+  .m-input-group-btn {
+    & .a-btn--icon {
+      right: 14px;
+      top: 17px 
+    }
+  }
+}
