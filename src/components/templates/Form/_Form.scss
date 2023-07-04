@@ -47,7 +47,9 @@
 
 @mixin FormTablet {
   .t-form { 
-    &__fields { 
+    &__fields {
+      gap: variables.$size-32;
+      
       width: 0;
     }
 
