@@ -1,0 +1,9 @@
+@use '@/components/atoms/responsive' as *;
+@use '@/components/molecules/responsive' as *;
+@use '@/components/organisms/responsive' as *;
+@use '@/components/templates/responsive' as *;
+
+@media screen and (min-width: 1440px) {
+  // Templates
+  @include ContainerCalculateAgeDesktop;
+}
