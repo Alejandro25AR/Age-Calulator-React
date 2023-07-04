@@ -28,9 +28,11 @@
 @mixin InputTablet {
   .a-input {
     font-size: variables.$fs-28;
+    padding-inline: variables.$size-16;
 
     &--with-border {
       font-size: variables.$fs-28;
+      padding-inline: variables.$size-16;
     }
   }
 }
