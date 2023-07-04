@@ -4,6 +4,8 @@
 @use '@/components/templates/responsive' as *;
 
 @media screen and (min-width: 1440px) {
+  // Atoms
+  @include SpanDesktop;
   // Templates
   @include ContainerCalculateAgeDesktop;
 }
