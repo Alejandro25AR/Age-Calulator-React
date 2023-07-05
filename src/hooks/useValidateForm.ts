@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 // Models
-import { IDate,errorMessageEmpty } from "@/models";
+import { IDate,IFocusedFields,errorMessageEmpty } from "@/models";
 // Helpers
 import { helpValidateForm } from "@/helper";
 
-function useValidateForm(form:IDate) {
+function useValidateForm(form:IDate,focusedFields:IFocusedFields) {
   const [errorMessages,setErrorMessages] = useState({...errorMessageEmpty});
   useEffect(() => {
-    const errorNewMessages = helpValidateForm(form);
+    const errorNewMessages = helpValidateForm(form,focusedFields);
     setErrorMessages({...errorMessages,...errorNewMessages});
   },[form])
 
