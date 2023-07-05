@@ -48,7 +48,7 @@ function Input({
       value={value}
       placeholder={placeholder}
       name={name}
-      className={className + (!existError ? " u-border-color-red" : '')}
+      className={className + (existError ? " u-border-color-red" : '')}
       maxLength={maxlength}
       inputMode={inputMode}
       onChange={handleChange}

@@ -41,22 +41,24 @@ function InputGroupBtn({
   const handleFocus = (e: React.FocusEvent<HTMLDivElement, Element>) => {
     const $parent = e.target.parentElement;
     const $button = $parent?.children[1];
+    $parent?.classList.remove("u-border-color-red");
     $parent?.classList.add("u-border-color-violet");
     $button?.classList.add("u-bg-violet");
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLDivElement, Element>) => {
-    if (!popup) {
-      const $parent = e.target.parentElement;
-      const $button = $parent?.children[1];
-      $parent?.classList.remove("u-border-color-violet");
-      $button?.classList.remove("u-bg-violet");
+    const $parent = e.target.parentElement;
+    const $button = $parent?.children[1];
+    $parent?.classList.remove("u-border-color-violet");
+    $button?.classList.remove("u-bg-violet");
+    if(existError) {
+      $parent?.classList.add("u-border-color-red");
     }
   };
 
   return (
     <div
-      className={`m-input-group-btn ${!existError ? "u-border-color-red" : "u-border-color-gray"}`}
+      className={`m-input-group-btn ${existError ? "u-border-color-red" : ""}`}
       onFocus={(e) => handleFocus(e)}
       onBlur={(e) => handleBlur(e)}
     >

@@ -54,7 +54,7 @@ function Field({
           popup={popup}
           inputMode={inputMode}
           refButton={refButtonTogglePopup}
-          existError={errorMessage===""}
+          existError={errorMessage!==""}
         />
       ) : (
         <Input
@@ -65,7 +65,7 @@ function Field({
           variant="with-border"
           handleChange={handleChange}
           maxlength={maxLength}
-          existError={errorMessage===""}
+          existError={errorMessage!==""}
           inputMode={inputMode}
         />
       )}
