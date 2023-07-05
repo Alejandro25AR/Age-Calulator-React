@@ -48,7 +48,7 @@ function Field({
           name={name}
           placeholder={placeholder}
           handleClick={togglePopup}
-          hanldleChange={handleChange}
+          handleChange={handleChange}
           value={value}
           maxlenght={maxLength}
           popup={popup}

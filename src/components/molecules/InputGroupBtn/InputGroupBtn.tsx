@@ -21,7 +21,7 @@ interface Props {
     | undefined;
   maxlenght?: number;
   handleClick: () => void;
-  hanldleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function InputGroupBtn({
@@ -35,7 +35,7 @@ function InputGroupBtn({
   refButton,
   existError,
   handleClick,
-  hanldleChange,
+  handleChange,
 }: Props) {
 
   const handleFocus = (e: React.FocusEvent<HTMLDivElement, Element>) => {
@@ -68,7 +68,7 @@ function InputGroupBtn({
         value={value}
         id={id}
         maxlength={maxlenght}
-        handleChange={hanldleChange}
+        handleChange={handleChange}
         inputMode={inputMode}
         existError={existError}
       />
