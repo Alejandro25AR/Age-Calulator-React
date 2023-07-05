@@ -1,5 +1,5 @@
-import { IDate, IErrorMessage, dateEmpty } from "@/models";
-import { ChangeEvent, createContext, useState } from "react";
+import { IDate, IErrorMessage, IFocusedFields, dateEmpty, initialFocusedFields } from "@/models";
+import { ChangeEvent,FocusEvent,createContext, useState } from "react";
 import { useValidateForm } from "@/hooks";
 
 interface Props {
@@ -8,15 +8,18 @@ interface Props {
 
 interface ContextReturn {
   form: IDate,
-  handleChange: (event:ChangeEvent<HTMLInputElement>,value?:string) => void;
   errorMessage: IErrorMessage;
+  focusedFields: IFocusedFields;
+  handleChange: (event:ChangeEvent<HTMLInputElement>,value?:string) => void;
+  changeFocusedFields: (event:FocusEvent<HTMLInputElement>) => void;
 }
 
 export const FormContext = createContext<ContextReturn>({} as ContextReturn);
 
 export function FormContextProvider({children}:Props) {
   const [form,setForm] = useState({...dateEmpty});
-  const errorMessage = useValidateForm(form);
+  const [focusedFields, setFocusedFields] = useState({...initialFocusedFields});
+  const errorMessage = useValidateForm(form,focusedFields);
 
   const handleChange = (event:ChangeEvent<HTMLInputElement>,value?:string) => {
     if(value !== undefined) {
@@ -33,10 +36,19 @@ export function FormContextProvider({children}:Props) {
     }
   }
 
+  const changeFocusedFields = (event:FocusEvent<HTMLInputElement>) => {
+    setFocusedFields({
+      ...focusedFields, 
+      [event.target.name]: true
+    })
+  }
+
   const values:ContextReturn = {
     form,
+    errorMessage,
+    focusedFields,
     handleChange,
-    errorMessage
+    changeFocusedFields
   }
 
   return (
