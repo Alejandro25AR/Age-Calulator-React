@@ -21,6 +21,7 @@ interface Props {
   | undefined;
   existError?: boolean;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleFocus: (e:React.FocusEvent<HTMLInputElement>) => void;
 }
 
 function Input({
@@ -33,6 +34,7 @@ function Input({
   inputMode,
   existError,
   handleChange,
+  handleFocus,
 }: Props) {
   const className = variant ? "a-input--" + variant : "a-input";
 
@@ -53,6 +55,7 @@ function Input({
       inputMode={inputMode}
       onChange={handleChange}
       onKeyDown={handleKeyDown}
+      onFocus={handleFocus}
     />
   );
 }
