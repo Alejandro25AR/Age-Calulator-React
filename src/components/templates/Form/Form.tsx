@@ -10,9 +10,9 @@ import { ProgressiveBarButton } from "@/components/molecules";
 import { Field } from "@/components/organisms";
 
 function Form() {
-  const { form,errorMessage,handleChange } = useContext(FormContext);
+  const { form,errorMessage,handleChange,changeFocusedFields,focusedFields } = useContext(FormContext);
   const daysOfMonth = useGetArrayDaysOfMonth(form.year, form.month);
-  const fieldsValidate = useGetNumberOfValid(errorMessage);
+  const fieldsValidate = useGetNumberOfValid(errorMessage,focusedFields);
   const handleSubmit = useSubmit(form);
 
   return (
@@ -35,6 +35,7 @@ function Form() {
           maxLength={2}
           inputMode="numeric"
           errorMessage={errorMessage.day}
+          handleFocus={changeFocusedFields}
         />
         <Field
           id="month"
@@ -48,6 +49,7 @@ function Form() {
           handleChange={handleChange}
           maxLength={3}
           errorMessage={errorMessage.month}
+          handleFocus={changeFocusedFields}
         />
         <Field
           id="year"
@@ -61,6 +63,7 @@ function Form() {
           maxLength={4}
           inputMode="numeric"
           errorMessage={errorMessage.year}
+          handleFocus={changeFocusedFields}
         />
       </div>
       <ProgressiveBarButton
