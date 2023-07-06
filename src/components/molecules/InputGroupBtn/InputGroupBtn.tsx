@@ -6,7 +6,6 @@ interface Props {
   name: string;
   value: string;
   placeholder: string;
-  popup: boolean;
   refButton: RefObject<HTMLButtonElement>;
   existError: boolean;
   inputMode?:
@@ -22,6 +21,7 @@ interface Props {
   maxlenght?: number;
   handleClick: () => void;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleFocusInput: (e:React.FocusEvent<HTMLInputElement>) => void;
 }
 
 function InputGroupBtn({
@@ -31,11 +31,11 @@ function InputGroupBtn({
   value,
   maxlenght,
   inputMode,
-  popup,
   refButton,
   existError,
   handleClick,
   handleChange,
+  handleFocusInput
 }: Props) {
 
   const handleFocus = (e: React.FocusEvent<HTMLDivElement, Element>) => {
@@ -58,7 +58,7 @@ function InputGroupBtn({
 
   return (
     <div
-      className={`m-input-group-btn ${existError ? "u-border-color-red" : ""}`}
+      className={`m-input-group-btn ${existError ? 'u-border-color-red' : ''} }`}
       onFocus={(e) => handleFocus(e)}
       onBlur={(e) => handleBlur(e)}
     >
@@ -69,6 +69,7 @@ function InputGroupBtn({
         id={id}
         maxlength={maxlenght}
         handleChange={handleChange}
+        handleFocus={handleFocusInput}
         inputMode={inputMode}
         existError={existError}
       />
