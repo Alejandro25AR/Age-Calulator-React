@@ -11,6 +11,7 @@ interface Props {
   contentLabel: string;
   placeholder: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>, value?:string) => void;
+  handleFocus: (e: React.FocusEvent<HTMLInputElement>) => void;
   errorMessage?: string;
   variant?: "InputGroupBtn";
   dataList?: Array<number | string>;
@@ -34,6 +35,7 @@ function Field({
   inputMode,
   errorMessage,
   handleChange,
+  handleFocus
 }: Props) {
   const refButtonTogglePopup = useRef<HTMLButtonElement>(null);
 
@@ -49,9 +51,9 @@ function Field({
           placeholder={placeholder}
           handleClick={togglePopup}
           handleChange={handleChange}
+          handleFocusInput={handleFocus}
           value={value}
           maxlenght={maxLength}
-          popup={popup}
           inputMode={inputMode}
           refButton={refButtonTogglePopup}
           existError={errorMessage!==""}
@@ -67,6 +69,7 @@ function Field({
           maxlength={maxLength}
           existError={errorMessage!==""}
           inputMode={inputMode}
+          handleFocus={handleFocus}
         />
       )}
 
