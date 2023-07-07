@@ -86,8 +86,6 @@
 
 @mixin ProgressiveBarBtnDesktop {
   .m-progressive-bar-btn {
-    width: variables.$circle-large;
-    height: variables.$circle-large;
     cursor: pointer;
 
     &:disabled {
