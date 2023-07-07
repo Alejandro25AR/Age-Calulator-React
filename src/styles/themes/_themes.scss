@@ -1,0 +1,27 @@
+@use '../config/colors';
+
+@media screen and (prefers-color-scheme:light) {
+  root {
+    --primary-color:   $light-primary-color;
+    --secondary-color: $light-secondary-color;
+    --neutral-color-1: $light-neutral-color-black;
+    --neutral-color-2: $light-neutral-color-gray;
+    --neutral-color-3: $light-neutral-color-dark-gray;
+    --accent-color:    $light-accent-color;
+    --error-color:     $light-error-color;
+    --progressive-bar-color: $light-progressive-bar-color;
+  }
+}
+
+@media screen and (prefers-color-scheme:dark) {
+  root {
+    --primary-color:   $dark-primary-color;
+    --secondary-color: $dark-secondary-color;
+    --neutral-color-1: $dark-neutral-color-white;
+    --neutral-color-2: $dark-neutral-color-gray;
+    --neutral-color-3: $dark-neutral-color-light-gray;
+    --accent-color:    $dark-accent-color;
+    --error-color:     $dark-error-color;
+    --progressive-bar-color: $dark-progressive-bar-color;
+  }
+}
