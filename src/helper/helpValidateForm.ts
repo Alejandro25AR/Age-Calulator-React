@@ -8,11 +8,13 @@ const regExpNumbers =  /^[0-9]+$/;
 function helpValidateForm(form:IDate,focusedFields: IFocusedFields) {
   const { year,month,day } = form;
   const errorMessage = {...errorMessageEmpty};
+  const currentDate = new Date();
 
   /* Validate field day */
   const numberMonth = helpGetNumberMonth(month);
   const daysOfMonth = helpGetDaysOfTheMonth(numberMonth,Number(year));
   const dayExist = Number(day) <= daysOfMonth && Number(day) > 0;
+
   if(focusedFields.day) {
     if(day === "") {
       errorMessage.day = 'This field can not be blank';
@@ -21,7 +23,7 @@ function helpValidateForm(form:IDate,focusedFields: IFocusedFields) {
       errorMessage.day = 'This field only takes digits';
     } 
     else if(!dayExist) {
-      errorMessage.day = 'The day digited is not valid';
+      errorMessage.day = 'The typed day is not valid';
     }
   }
   
@@ -32,7 +34,7 @@ function helpValidateForm(form:IDate,focusedFields: IFocusedFields) {
       errorMessage.month = 'This field can not be blank';
     } 
     else if(regExpNumbers.test(month)) {
-      errorMessage.month = 'This field can not have number';
+      errorMessage.month = 'This can not have nums';
     } 
     else if(helpGetNumberMonth(month)===-1) {
       errorMessage.month = 'The month is not valid';
@@ -47,11 +49,21 @@ function helpValidateForm(form:IDate,focusedFields: IFocusedFields) {
     else if(isNaN(Number(year))) {
       errorMessage.year = 'This field only takes digits';
     } 
-    else if(Number(year) > 2023 ) {
-      errorMessage.year ='The year must be less than 2024';
+    else if(Number(year) > currentDate.getFullYear() ) {
+      errorMessage.year =`Must be less than ${currentDate.getFullYear() + 1}`;
     } 
     else if(Number(year) < 0 ) {
       errorMessage.year ='The year can not be negative';
+    }
+  }
+
+  /* Special validation */
+  if(Number(year) === currentDate.getFullYear()){
+    if(helpGetNumberMonth(month) > currentDate.getMonth()+1) {
+      errorMessage.month ='Can not beats actual month';
+    }
+    else if(helpGetNumberMonth(month) === currentDate.getMonth()+1 && Number(day) > currentDate.getDate()) {
+      errorMessage.day ='Can not beats current day';
     }
   }
 
