@@ -11,7 +11,7 @@ interface Props {
   contentLabel: string;
   placeholder: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>, value?:string) => void;
-  handleFocus: (e: React.FocusEvent<HTMLInputElement>) => void;
+  handleFocus: (name: string) => void;
   errorMessage?: string;
   variant?: "InputGroupBtn";
   dataList?: Array<number | string>;

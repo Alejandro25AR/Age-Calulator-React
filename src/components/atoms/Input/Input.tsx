@@ -21,7 +21,7 @@ interface Props {
   | undefined;
   existError?: boolean;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleFocus: (e:React.FocusEvent<HTMLInputElement>) => void;
+  handleFocus: (name: string) => void;
 }
 
 function Input({
@@ -55,7 +55,7 @@ function Input({
       inputMode={inputMode}
       onChange={handleChange}
       onKeyDown={handleKeyDown}
-      onFocus={handleFocus}
+      onFocus={(e)=>handleFocus(e.target.name)}
     />
   );
 }

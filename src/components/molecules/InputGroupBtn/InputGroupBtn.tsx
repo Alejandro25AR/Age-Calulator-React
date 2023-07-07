@@ -21,7 +21,7 @@ interface Props {
   maxlenght?: number;
   handleClick: () => void;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleFocusInput: (e:React.FocusEvent<HTMLInputElement>) => void;
+  handleFocusInput: (name:string) => void;
 }
 
 function InputGroupBtn({
@@ -44,6 +44,7 @@ function InputGroupBtn({
     $parent?.classList.remove("u-border-color-red");
     $parent?.classList.add("u-border-color-violet");
     $button?.classList.add("u-bg-violet");
+    handleFocusInput(name);
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLDivElement, Element>) => {

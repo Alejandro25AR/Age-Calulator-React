@@ -11,7 +11,7 @@ interface ContextReturn {
   errorMessage: IErrorMessage;
   focusedFields: IFocusedFields;
   handleChange: (event:ChangeEvent<HTMLInputElement>,value?:string) => void;
-  changeFocusedFields: (event:FocusEvent<HTMLInputElement>) => void;
+  changeFocusedFields: (name:string) => void;
 }
 
 export const FormContext = createContext<ContextReturn>({} as ContextReturn);
@@ -36,10 +36,10 @@ export function FormContextProvider({children}:Props) {
     }
   }
 
-  const changeFocusedFields = (event:FocusEvent<HTMLInputElement>) => {
+  const changeFocusedFields = (name:string) => {
     setFocusedFields({
       ...focusedFields, 
-      [event.target.name]: true
+      [name]: true
     })
   }
 
