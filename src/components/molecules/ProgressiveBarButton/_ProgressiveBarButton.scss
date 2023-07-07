@@ -11,15 +11,18 @@
 
     line-height: 0;
 
-    background-color: variables.$secondary-color;
     border-radius: 100%;
     border: 2px solid variables.$accent-color;
-    background-color: variables.$neutral-color-gray;
+    background-color: variables.$primary-color;
     
     &:disabled {
       & {
         border-color: variables.$neutral-color-dark-gray;
         border-style: dashed;
+      }
+
+      & path {
+        fill: variables.$neutral-color-dark-gray 
       }
 
       & .m-progressive-bar-btn__bar {
@@ -28,7 +31,11 @@
 
       &:active {
         & {
-          border-color: variables.$neutral-color-gray;
+          border-color: variables.$error-color;
+        }
+
+        & path{
+          fill: variables.$error-color;
         }
         & span {
           color: variables.$neutral-color-gray;
