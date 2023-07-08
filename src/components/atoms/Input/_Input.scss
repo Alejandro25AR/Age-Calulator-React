@@ -6,21 +6,26 @@
     width: 100%;
     padding: variables.$size-8 variables.$size-12;
 
+    color: var(--neutral-color-1);
     font-size: variables.$fs-20;
     text-transform: capitalize;
+    
+    &::placeholder {
+      color: var(--neutral-color-2);
+    }
   }
 
   &--with-border {
     @extend .a-input;
-    border: 2px solid gray;
+    border: 2px solid var(--neutral-color-2);
     border-radius: 4px;
 
     &:focus {
-      border-color: variables.$accent-color;
+      border-color: var(--accent-color);
     }
 
     &:invalid {
-      border-color: variables.$error-color;
+      border-color: var(--error-color);
     }
   }
 }
