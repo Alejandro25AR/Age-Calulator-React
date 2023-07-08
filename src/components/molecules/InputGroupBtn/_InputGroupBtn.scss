@@ -4,7 +4,7 @@
   & {
     position: relative;
 
-    border: 2px solid variables.$neutral-color-gray;
+    border: 2px solid var(--neutral-color-2);
     border-radius: variables.$radius-4;
   }
 
@@ -15,7 +15,7 @@
   }
 
   &:focus-within {
-    border-color: variables.$accent-color;
+    border-color: var(--accent-color);
   }
 }
 
