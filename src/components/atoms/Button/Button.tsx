@@ -4,7 +4,7 @@ import { Icon } from "..";
 interface Props {
   content?: string;
   variant?: "icon";
-  icon?: "Arrow";
+  icon?: "Arrow" | "Moon" | "Sun";
   refButton?: RefObject<HTMLButtonElement>;
   handleClick: () => void;
 }
