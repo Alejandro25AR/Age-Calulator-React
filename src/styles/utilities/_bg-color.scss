@@ -1,5 +1,5 @@
 @use '../config/variables';
 
 .u-bg-violet {
-  background-color: variables.$accent-color;
+  background-color: var(--accent-color);
 }
