@@ -1,4 +1,4 @@
-import { DefaultLayout, Form, EstimatedAge, ContainerCalculateAge } from "@/components/templates";
+import { DefaultLayout, Form, EstimatedAge, ContainerCalculateAge, ChangeTheme } from "@/components/templates";
 import { AgeProvider, FormContextProvider } from "@/context";
 
 
@@ -8,6 +8,7 @@ function Home() {
     <DefaultLayout>
       <FormContextProvider>
         <AgeProvider>
+          <ChangeTheme/>
           <ContainerCalculateAge>
             <Form/>
             <EstimatedAge/>
