@@ -12,46 +12,46 @@
     line-height: 0;
 
     border-radius: 100%;
-    border: 2px solid variables.$accent-color;
-    background-color: variables.$primary-color;
+    border: 2px solid var(--accent-color);
+    background-color: var(--primary-color);
     
     &:disabled {
       & {
-        border-color: variables.$neutral-color-dark-gray;
+        border-color: var(--neutral-color-3);
         border-style: dashed;
       }
 
       & path {
-        fill: variables.$neutral-color-dark-gray 
+        fill: var(--neutral-color-3);
       }
 
       & .m-progressive-bar-btn__bar {
-        background-color: variables.$progressive-bar-color;
+        background-color: var(--progressive-bar-color);
       }
 
       &:active {
         & {
-          border-color: variables.$error-color;
+          border-color: var(--error-color);
         }
 
         & path{
-          fill: variables.$error-color;
+          fill: var(--error-color);
         }
         & span {
-          color: variables.$neutral-color-gray;
+          color: var(--neutral-color-2)
         }
         & div{
-          background-color: variables.$progressive-bar-color;
+          background-color: var(--progressive-bar-color);
         }
       }
     }
 
     &:active {
       & span {
-        color: variables.$secondary-color;
+        color: var(--secondary-color);
       }
       & div {
-        background-color: variables.$neutral-color-black;
+        background-color: var(--neutral-color-1);
       }
     }
   }
@@ -64,7 +64,7 @@
     width: 102%;
     height: 100%;
 
-    background-color: variables.$accent-color;
+    background-color: var(--accent-color);
 
     transition: transform .5s ease;
     transform: translateY(100%);
@@ -74,6 +74,10 @@
     position: relative;
     width: variables.$size-24;
     height: variables.$size-24;
+  }
+
+  & path {
+    fill: var(--secondary-color);
   }
 }
 
