@@ -7,20 +7,21 @@
     display: block;
     padding: variables.$size-12 variables.$size-16;
 
+    color: var(--neutral-color-1);
     text-transform: capitalize;
     text-align: center;
     font-size: variables.$fs-16;
 
-    border: 2px solid variables.$neutral-color-gray;
+    border: 2px solid var(--neutral-color-2);
     border-radius: variables.$radius-8;
-    background-color: variables.$secondary-color;
+    background-color: var(--secondary-color);
   }
 
   &:checked + label {
-    color: variables.$secondary-color;
+    color: var(--secondary-color);
 
-    border-color: variables.$accent-color;
-    background-color: variables.$accent-color;
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
   }
 
   &--small + label{
@@ -29,5 +30,24 @@
     font-size: variables.$fs-16;
     
     border-radius: variables.$radius-4;
+  }
+}
+
+@mixin RadioButtonDesktop {
+  .a-radio-btn {
+    & + label:hover {
+      cursor: pointer;
+      color: var(--primary-color);
+
+      border-color: var(--neutral-color-1);
+      background-color: var(--neutral-color-1);
+    }
+
+    & + label:active {
+      color: var(--secondary-color);
+  
+      border-color: var(--accent-color);
+      background-color: var(--accent-color);
+    }
   }
 }
