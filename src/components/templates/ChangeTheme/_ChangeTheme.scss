@@ -1,0 +1,43 @@
+@use '../../../styles/config/variables';
+
+.t-change-theme {
+  & {
+    position: absolute;
+    top: variables.$size-16;
+    left: variables.$size-16;
+  }
+  
+  & .a-btn--icon {
+    width: 50px;
+    height: 50px;
+
+    background: transparent;
+    border-radius: 100%;
+    box-shadow: 0 0 variables.$size-32 white;
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin ChangeThemeTablet {
+  .t-change-theme {
+    & {
+      top: variables.$size-32;
+      left: variables.$size-32;
+    }
+  }
+}
+
+
+@mixin ChangeThemeDesktop {
+  .t-change-theme {
+    & .a-btn--icon {
+      &:hover {
+        box-shadow: 0 0 2rem rgb(255, 246, 166);
+      }
+    }
+  }
+}
