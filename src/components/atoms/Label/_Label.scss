@@ -4,7 +4,7 @@
   font-size: variables.$fs-12;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: variables.$neutral-color-dark-gray;
+  color: var(--neutral-color-3);
 }
 
 @mixin LabelTablet {
