@@ -3,17 +3,17 @@
 .a-span {
   & {
     font-size: variables.$fs-span-mobile-n;
-    color: variables.$neutral-color-black;
+    color: var(--neutral-color-1);
   }
 
   &--purple {
     @extend .a-span;
-    color: variables.$accent-color;
+    color: var(--accent-color);
   }
 
   &--red {
     @extend .a-span;
-    color: variables.$error-color;
+    color: var(--error-color);
   }
 
   &--small {
@@ -34,7 +34,7 @@
 
   &--small-red {
     font-size: variables.$fs-span-mobile-s;
-    color: variables.$error-color;
+    color: var(--error-color);
   }
 
   &--giant {
@@ -50,7 +50,7 @@
 
   &--giant-purple {
     font-size: variables.$fs-span-mobile-l;
-    color: variables.$accent-color;
+    color: var(--accent-color)
   }
 }
 
