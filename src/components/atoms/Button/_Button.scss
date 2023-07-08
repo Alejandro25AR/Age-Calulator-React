@@ -6,15 +6,15 @@
 
     font-size: variables.$fs-20;
 
-    background-color: variables.$secondary-color;
+    background-color: var(--secondary-color);
     border-radius: variables.$radius-8;
-    border: 2px solid variables.$accent-color;
+    border: 2px solid var(--accent-color);
 
     &:active {
-      color: variables.$secondary-color;
+      color: var(--secondary-color);
 
-      background-color: variables.$neutral-color-black;
-      border-color: variables.$neutral-color-black;
+      background-color: var(--neutral-color-1);
+      border-color: var(--neutral-color-1);
     }
   }
 
@@ -30,11 +30,15 @@
     line-height: 0;
 
     border-radius: variables.$radius-4;
-    background-color: variables.$neutral-color-gray;
+    background-color: var(--neutral-color-2);
 
     & svg{
       width: 45%;
       height: auto;
+    }
+
+    & path {
+      fill: var(--secondary-color)
     }
   }
 }
