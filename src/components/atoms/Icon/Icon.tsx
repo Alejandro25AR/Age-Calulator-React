@@ -21,7 +21,7 @@ function Icon({icon}:Props) {
   if(icon === "Sun") {
     return ( 
       <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"  fill="none" >
-        <circle cx="75" cy="75" r="74" fill="#FEE999" stroke="#FFF6D7" stroke-width="2"/>
+        <circle cx="75" cy="75" r="74" fill="#FEE999" stroke="#FFF6D7" strokeWidth="2"/>
         <circle cx="75" cy="75" r="66" fill="#FFC23B"/>
         <circle cx="75" cy="75" r="58" fill="#FEA600"/>
       </svg>
