@@ -6,15 +6,15 @@ import { AgeProvider, FormContextProvider } from "@/context";
 function Home() {
   return (
     <DefaultLayout>
-      <FormContextProvider>
+      <ChangeTheme/>
+      <ContainerCalculateAge>
         <AgeProvider>
-          <ChangeTheme/>
-          <ContainerCalculateAge>
+          <FormContextProvider>
             <Form/>
-            <EstimatedAge/>
-          </ContainerCalculateAge>
+          </FormContextProvider>
+          <EstimatedAge/>
         </AgeProvider>
-      </FormContextProvider>
+      </ContainerCalculateAge>
     </DefaultLayout>
   );
 }
