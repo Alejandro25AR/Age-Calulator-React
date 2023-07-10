@@ -27,6 +27,14 @@ function helpValidateForm(form:IDate,focusedFields: IFocusedFields) {
   return errorMessage;
 }
 
+/**
+ * This function returns an error message if the text field "Day" does not meet the requirements.
+ * @param day - value of field text day
+ * @param month - value of field text month
+ * @param year - value of field text year
+ * @param isFocusedDay - value to know if the field has already been focused.
+ * @returns a message error or "" if no error
+ */
 function getErrorMessageFromDayField(day:string,month:string,year:string,isFocusedDay:boolean) {
   const numberMonth = helpGetNumberMonth(month);
   const daysOfMonth = helpGetDaysOfTheMonth(numberMonth,Number(year));
@@ -46,6 +54,12 @@ function getErrorMessageFromDayField(day:string,month:string,year:string,isFocus
   return '';
 }
 
+/**
+ * This function returns an error message if the text field "Month" does not meet the requirements.
+ * @param month - value of field text month
+ * @param isFocusedDay - value to know if the field has already been focused.
+ * @returns a message error or "" if no error
+ */
 function getErrorMessageFromMonthField(month:string,isFocusedMonth:boolean) {
   if(isFocusedMonth) {
     if(month === "") {
@@ -61,6 +75,13 @@ function getErrorMessageFromMonthField(month:string,isFocusedMonth:boolean) {
   return "";
 }
 
+/**
+ * This function returns an error message if the text field "Year" does not meet the requirements.
+ * @param month - value of field text month
+ * @param isFocusedDay - value to know if the field has already been focused.
+ * @param currentDate - current date
+ * @returns a message error or "" if no error
+ */
 function getErrorMessageFromYearField(year:string,isFocusedYear:boolean,currentDate:Date) {
   if(isFocusedYear) {
     if(year === "") {
