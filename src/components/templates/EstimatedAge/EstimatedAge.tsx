@@ -1,5 +1,6 @@
-import { TextPairs } from "@/components/molecules";
 import { memo } from "react";
+/* Components */
+import { TextPairs } from "@/components/molecules";
 
 interface Props {
   year:string;
