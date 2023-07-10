@@ -91,6 +91,17 @@
 @mixin ProgressiveBarBtnDesktop {
   .m-progressive-bar-btn {
     cursor: pointer;
+    &:hover {
+      & div {
+        background-color: var(--neutral-color-1);
+      }
+    }
+
+    &:active {
+      & div {
+        background-color: var(--accent-color);
+      }
+    }
 
     &:disabled {
       cursor: not-allowed;
