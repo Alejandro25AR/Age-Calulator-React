@@ -79,6 +79,7 @@ function InputGroupBtn({
         icon="Arrow"
         handleClick={handleClick}
         refButton={refButton}
+        title={`open values ${name}`}
       />
     </div>
   );
