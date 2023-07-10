@@ -1,3 +1,4 @@
+/**TSDocs */
 // Models
 import { IDate, IFocusedFields, errorMessageEmpty } from "@/models";
 // Helpers
@@ -5,6 +6,15 @@ import { helpGetDaysOfTheMonth, helpGetNumberMonth } from ".";
 
 const regExpNumbers =  /^[0-9]+$/;
 
+/**
+ * This function validates each value of the form fields and returns the error messages contained in each field.
+ * @param form - values of each form field
+ * @param focusedFields - value of each field of the form if it was focused
+ * @returns a object with
+ *  - message error for field text Day
+ *  - message error for field text Month
+ *  - message error for field text Year
+ */
 function helpValidateForm(form:IDate,focusedFields: IFocusedFields) {
   const { year,month,day } = form;
   const errorMessage = {...errorMessageEmpty};
