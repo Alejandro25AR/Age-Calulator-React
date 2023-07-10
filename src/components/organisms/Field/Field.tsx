@@ -1,8 +1,9 @@
 import { useRef } from "react";
+/* Custom hooks */
+import { usePopup } from "@/hooks";
 // Components
 import { Input, LabelMemo, Popup, SpanMemo } from "@/components/atoms";
 import { InputGroupBtn, RadioButtonList } from "@/components/molecules";
-import { usePopup } from "@/hooks";
 
 interface Props {
   id: string;
