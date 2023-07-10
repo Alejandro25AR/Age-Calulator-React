@@ -8,7 +8,7 @@ import { MONTHS } from "@/constants";
 // Custom Hooks
 import { useSubmit,useGetArrayDaysOfMonth,useGetNumberOfValid } from "./hooks";
 // Components
-import { ProgressiveBarButton } from "@/components/molecules";
+import { ProgressiveBarButtonMemo } from "@/components/molecules";
 import { Field } from "@/components/organisms";
 
 interface Props {
@@ -72,7 +72,7 @@ function Form({changeCurrentAge}:Props) {
           handleFocus={changeFocusedFields}
         />
       </div>
-      <ProgressiveBarButton
+      <ProgressiveBarButtonMemo
         icon="Arrow"
         handleClick={() => {}}
         fieldsValidate={fieldsValidate}
