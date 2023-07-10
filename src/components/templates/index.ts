@@ -1,3 +1,4 @@
+export { default as CalculateAge } from './CalculateAge/CalculateAge';
 export { default as ChangeTheme } from './ChangeTheme/ChangeTheme';
 export { default as ContainerCalculateAge } from './ContainerCalculateAge/ContainerCalculateAge';
 export { default as DefaultLayout } from './DefaultLayout/DefaultLayout';
