@@ -1,6 +1,6 @@
 import { useRef } from "react";
 // Components
-import { Input, Label, Popup, Span } from "@/components/atoms";
+import { Input, LabelMemo, Popup, SpanMemo } from "@/components/atoms";
 import { InputGroupBtn, RadioButtonList } from "@/components/molecules";
 import { usePopup } from "@/hooks";
 
@@ -43,7 +43,7 @@ function Field({
 
   return (
     <div className="o-field">
-      <Label htmlFor={id} content={contentLabel} />
+      <LabelMemo htmlFor={id} content={contentLabel} />
       {variant ? (
         <InputGroupBtn
           id={id}
@@ -73,7 +73,7 @@ function Field({
         />
       )}
 
-      {errorMessage && <Span content={errorMessage} variant="small-red" />}
+      {errorMessage && <SpanMemo content={errorMessage} variant="small-red" />}
       
       {variant && dataList && popup ? (
         <Popup statePopup={popup} hidePopup={hidePopup} refButton={refButtonTogglePopup}>
