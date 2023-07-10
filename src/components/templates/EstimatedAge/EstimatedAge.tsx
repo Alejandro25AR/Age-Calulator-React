@@ -1,4 +1,5 @@
 import { TextPairs } from "@/components/molecules";
+import { memo } from "react";
 
 interface Props {
   year:string;
@@ -20,4 +21,8 @@ function EstimatedAge({ year,day,month }: Props) {
   );
 }
 
-export default EstimatedAge;
+const EstimatedAgeMemo = memo((props: Props) => (
+  <EstimatedAge {...props}/>
+));
+
+export { EstimatedAgeMemo };
