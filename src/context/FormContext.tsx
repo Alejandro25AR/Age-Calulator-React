@@ -37,10 +37,14 @@ export function FormContextProvider({children}:Props) {
   }
 
   const changeFocusedFields = (name:string) => {
-    setFocusedFields({
-      ...focusedFields, 
-      [name]: true
-    })
+    if(name === "year" || name === "month" || name === "day"){
+      if(!focusedFields[name]) {
+        setFocusedFields({
+          ...focusedFields, 
+          [name]: true
+        })
+      }
+    }
   }
 
   const values:ContextReturn = {
