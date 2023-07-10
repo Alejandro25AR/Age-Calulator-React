@@ -7,9 +7,10 @@ interface Props {
   icon?: "Arrow" | "Moon" | "Sun";
   refButton?: RefObject<HTMLButtonElement>;
   handleClick: () => void;
+  title?: string;
 }
 
-function Button({ variant, content, icon, refButton, handleClick }: Props) {
+function Button({ variant, content, icon, refButton, title, handleClick }: Props) {
   const className = variant ? "a-btn--" + variant : "a-btn";
 
   const handleOnClick = (e:React.MouseEvent<HTMLElement,MouseEvent>) => {
@@ -28,6 +29,7 @@ function Button({ variant, content, icon, refButton, handleClick }: Props) {
       className={className}
       onClick={(e)=>handleOnClick(e)}
       onTouchEnd={(e)=>handleOnTouchEnd(e)}
+      title={title}
     >
       {content || <Icon icon={icon} />}
     </button>
