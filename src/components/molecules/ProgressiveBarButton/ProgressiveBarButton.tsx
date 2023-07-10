@@ -6,6 +6,7 @@ interface Props {
   handleClick: () => void;
   fiedlNumber: number;
   fieldsValidate: number;
+  title: string;
 }
 
 function ProgressiveBarButton({
@@ -13,6 +14,7 @@ function ProgressiveBarButton({
   handleClick,
   fieldsValidate = 0,
   fiedlNumber,
+  title
 }: Props) {
   const dividedPercent = useMemo(() => {
     return 100 / fiedlNumber;
@@ -28,6 +30,7 @@ function ProgressiveBarButton({
       className="m-progressive-bar-btn"
       onClick={handleClick}
       disabled={fiedlNumber - fieldsValidate !== 0}
+      title={title}
     >
       <div
         className="m-progressive-bar-btn__bar"
