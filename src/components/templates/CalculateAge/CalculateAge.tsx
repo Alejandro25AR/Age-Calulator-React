@@ -1,6 +1,9 @@
-import { FormContextProvider } from "@/context";
-import { IDate, dateEmpty } from "@/models";
 import { useState } from "react";
+/* Models */
+import { IDate, dateEmpty } from "@/models";
+/* Context */
+import { FormContextProvider } from "@/context";
+/* Components */
 import { EstimatedAgeMemo, Form } from "..";
 
 function CalculateAge() {
