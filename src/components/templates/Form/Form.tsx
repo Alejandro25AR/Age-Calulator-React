@@ -1,4 +1,6 @@
 import { useContext } from "react";
+// Models
+import { IDate } from "@/models";
 // Context
 import { FormContext } from "@/context";
 // Constants
@@ -9,11 +11,15 @@ import { useSubmit,useGetArrayDaysOfMonth,useGetNumberOfValid } from "./hooks";
 import { ProgressiveBarButton } from "@/components/molecules";
 import { Field } from "@/components/organisms";
 
-function Form() {
+interface Props {
+  changeCurrentAge: (age: IDate) => void;
+}
+
+function Form({changeCurrentAge}:Props) {
   const { form,errorMessage,handleChange,changeFocusedFields,focusedFields } = useContext(FormContext);
   const daysOfMonth = useGetArrayDaysOfMonth(form.year, form.month);
   const fieldsValidate = useGetNumberOfValid(errorMessage,focusedFields);
-  const handleSubmit = useSubmit(form);
+  const handleSubmit = useSubmit(form,changeCurrentAge);
 
   return (
     <form
@@ -71,6 +77,7 @@ function Form() {
         handleClick={() => {}}
         fieldsValidate={fieldsValidate}
         fiedlNumber={3}
+        title="calculate age"
       />
     </form>
   );
