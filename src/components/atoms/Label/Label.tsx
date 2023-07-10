@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 interface Props {
   content: string;
   htmlFor: string;
@@ -14,4 +16,6 @@ function Label({content,htmlFor}:Props) {
   );
 }
 
-export default Label;
+const LabelMemo = memo((props:Props) => <Label {...props}/>)
+
+export { Label,LabelMemo };
