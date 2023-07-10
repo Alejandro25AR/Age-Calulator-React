@@ -1,19 +1,12 @@
-import { DefaultLayout, Form, EstimatedAge, ContainerCalculateAge, ChangeTheme } from "@/components/templates";
-import { AgeProvider, FormContextProvider } from "@/context";
-
-
+import { DefaultLayout, ContainerCalculateAge, ChangeTheme } from "@/components/templates";
+import CalculateAge from "@/components/templates/CalculateAge/CalculateAge";
 
 function Home() {
   return (
     <DefaultLayout>
       <ChangeTheme/>
       <ContainerCalculateAge>
-        <AgeProvider>
-          <FormContextProvider>
-            <Form/>
-          </FormContextProvider>
-          <EstimatedAge/>
-        </AgeProvider>
+        <CalculateAge/>
       </ContainerCalculateAge>
     </DefaultLayout>
   );
