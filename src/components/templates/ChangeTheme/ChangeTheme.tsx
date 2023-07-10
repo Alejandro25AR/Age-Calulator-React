@@ -10,6 +10,7 @@ function ChangeTheme() {
         icon={dark ? "Moon" : "Sun"}
         handleClick={handleChangeTheme}
         variant="icon"
+        title="change theme"
       />
     </div>
   );
