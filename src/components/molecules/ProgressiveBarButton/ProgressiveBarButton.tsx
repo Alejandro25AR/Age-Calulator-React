@@ -1,5 +1,5 @@
 import { Icon } from "@/components/atoms";
-import { useMemo } from "react";
+import { memo, useMemo } from "react";
 
 interface Props {
   icon?: "Arrow";
@@ -43,4 +43,11 @@ function ProgressiveBarButton({
   );
 }
 
-export default ProgressiveBarButton;
+const ProgressiveBarButtonMemo = memo(
+  (props: Props) => <ProgressiveBarButton {...props}/>
+  , (oldProps:Props,newProps:Props) => {
+    return oldProps.fieldsValidate === newProps.fieldsValidate
+  }
+);
+
+export { ProgressiveBarButton,ProgressiveBarButtonMemo };
