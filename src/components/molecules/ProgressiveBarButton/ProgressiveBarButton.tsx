@@ -1,5 +1,6 @@
-import { Icon } from "@/components/atoms";
 import { memo, useMemo } from "react";
+/* Components */
+import { Icon } from "@/components/atoms";
 
 interface Props {
   icon?: "Arrow";
