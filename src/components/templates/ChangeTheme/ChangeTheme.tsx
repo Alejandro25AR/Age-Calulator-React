@@ -1,5 +1,7 @@
-import { Button } from "@/components/atoms";
+/* Custom Hooks */
 import { useChangeTheme } from "@/hooks";
+/* Components */
+import { Button } from "@/components/atoms";
 
 function ChangeTheme() {
   const [dark,handleChangeTheme] = useChangeTheme();
