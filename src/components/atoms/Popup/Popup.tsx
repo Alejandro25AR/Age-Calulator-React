@@ -1,8 +1,9 @@
+import { FocusEvent, RefObject, useRef, ReactNode } from "react";
+/* Custom Hooks */
 import { useOnClickOutside } from "@/hooks";
-import React, { FocusEvent, RefObject, useRef } from "react";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   statePopup: boolean;
   refButton?: RefObject<HTMLElement> 
   hidePopup: () => void;
