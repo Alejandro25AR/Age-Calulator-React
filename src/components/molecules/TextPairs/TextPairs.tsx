@@ -1,3 +1,4 @@
+/* Components */
 import { Span, Text } from "@/components/atoms";
 
 interface Props {
