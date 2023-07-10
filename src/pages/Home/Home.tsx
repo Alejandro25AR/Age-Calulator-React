@@ -1,5 +1,4 @@
-import { DefaultLayout, ContainerCalculateAge, ChangeTheme } from "@/components/templates";
-import CalculateAge from "@/components/templates/CalculateAge/CalculateAge";
+import { DefaultLayout, ContainerCalculateAge, ChangeTheme, CalculateAge } from "@/components/templates";
 
 function Home() {
   return (
