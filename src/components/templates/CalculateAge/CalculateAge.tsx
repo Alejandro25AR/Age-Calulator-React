@@ -1,8 +1,7 @@
 import { FormContextProvider } from "@/context";
 import { IDate, dateEmpty } from "@/models";
 import { useState } from "react";
-import EstimatedAgeMemo from "../EstimatedAge/EstimatedAge";
-import { Form } from "..";
+import { EstimatedAgeMemo, Form } from "..";
 
 function CalculateAge() {
   const [currentAge,setCurrentAge] = useState({...dateEmpty});
