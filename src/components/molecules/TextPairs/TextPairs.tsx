@@ -13,7 +13,7 @@ function TextPairs({ value, namePeriod }: Props) {
         content={value ? value : "--"} 
         variant="giant-purple" />
       <Span
-        content={value === 1 ? namePeriod : namePeriod + "s"}
+        content={Number(value) === 1 ? namePeriod : namePeriod + "s"}
         variant="giant-italic"
       />
     </Text>
