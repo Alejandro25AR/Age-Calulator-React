@@ -27,3 +27,12 @@
     }
   }
 }
+
+@mixin InputGroupBtnDesktop {
+  .m-input-group-btn {
+    & .a-btn--icon {
+      right: 16px;
+      top: 24px; 
+    }
+  }
+}
