@@ -15,6 +15,7 @@ $size-58: #{math.div(58,bfs.$size)+'rem'};
 $size-64: #{math.div(64,bfs.$size)+'rem'};
 $size-80: #{math.div(80,bfs.$size)+'rem'};
 $size-88: #{math.div(88,bfs.$size)+'rem'};
+$size-102: #{math.div(102,bfs.$size)+'rem'};
 $size-128: #{math.div(128,bfs.$size)+'rem'};
 $size-152: #{math.div(152,bfs.$size)+'rem'};
 
@@ -23,5 +24,6 @@ $radius-8: #{math.div(8,bfs.$size)+'rem'};
 $radius-32: #{math.div(22,bfs.$size)+'rem'};
 $radius-112: #{math.div(112,bfs.$size)+'rem'};
 
-$circle-normal: $size-64;
-$circle-large: $size-80;
+$circle-small: $size-64;
+$circle-normal: $size-80;
+$circle-large: $size-102;
