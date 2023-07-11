@@ -24,6 +24,12 @@
 
 @mixin FieldTablet{
   .o-field {
-    width: 8rem;
+    width: variables.$size-128;
+  }
+}
+
+@mixin FieldDesktop{
+  .o-field {
+    width: variables.$size-152;
   }
 }
