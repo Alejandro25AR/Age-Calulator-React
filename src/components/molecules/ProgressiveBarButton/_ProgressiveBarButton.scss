@@ -6,8 +6,8 @@
     
     display: block;
     overflow: hidden;
-    width: variables.$circle-normal;
-    height: variables.$circle-normal;
+    width: variables.$circle-small;
+    height: variables.$circle-small;
 
     line-height: 0;
 
@@ -83,14 +83,31 @@
 
 @mixin ProgressiveBarBtnTablet {
   .m-progressive-bar-btn {
-    width: variables.$circle-large;
-    height: variables.$circle-large;
+    & {
+      width: variables.$circle-normal;
+      height: variables.$circle-normal;
+    }
+
+    & svg {
+      width: variables.$size-28;
+      height: variables.$size-28;
+    }
   }
 }
 
 @mixin ProgressiveBarBtnDesktop {
   .m-progressive-bar-btn {
-    cursor: pointer;
+    &{
+      cursor: pointer;
+      width: variables.$circle-large;
+      height: variables.$circle-large;
+    }
+
+    & svg {
+      width: variables.$size-32;
+      height: variables.$size-32;
+    }
+
     &:hover {
       & div {
         background-color: var(--neutral-color-1);
