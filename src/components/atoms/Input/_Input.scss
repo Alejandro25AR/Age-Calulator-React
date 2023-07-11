@@ -41,3 +41,16 @@
     }
   }
 }
+
+@mixin InputDesktop {
+  .a-input {
+    font-size: variables.$fs-32;
+    padding: variables.$size-12 variables.$size-18;
+
+    &--with-border {
+      font-size: variables.$fs-32;
+      padding: variables.$size-12 variables.$size-18;
+
+    }
+  }
+}
