@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 interface Props {
   id: string;
   name: string;
@@ -24,15 +26,18 @@ function RadioButton({
   togglePopup,
 }: Props) {
   const className = variant ? "a-radio-btn--" + variant : "";
+  const refInput = useRef<HTMLInputElement>(null);
 
   const handleKeyUp = (e: React.KeyboardEvent<HTMLLabelElement>) => {
     if (e.key === "Enter") {
-      const $input = e.currentTarget.parentElement?.children[0];
-      $input?.setAttribute("checked", "");
-      $input?.click();
-      setTimeout(() => {
-        togglePopup();
-      }, 100);
+      if(refInput !== null) {
+        refInput.current?.setAttribute("checked","");
+        refInput.current?.click();
+        setTimeout(() => {
+          togglePopup();
+        }, 100);
+      }
+      
     }
   };
 
@@ -54,6 +59,7 @@ function RadioButton({
           handleChange(e, content);
         }}
         defaultChecked={id === value}
+        ref={refInput}
       />
       <label
         htmlFor={id}
