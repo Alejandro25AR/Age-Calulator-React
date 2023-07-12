@@ -20,6 +20,7 @@
     @extend .a-input;
     border: 2px solid var(--neutral-color-2);
     border-radius: 4px;
+    line-height: 30px;
 
     &:focus {
       border-color: var(--accent-color);
@@ -40,6 +41,7 @@
     &--with-border {
       font-size: variables.$fs-28;
       padding-inline: variables.$size-16;
+      line-height: 42px;
     }
   }
 }
@@ -53,7 +55,7 @@
     &--with-border {
       font-size: variables.$fs-32;
       padding: variables.$size-12 variables.$size-18;
-
+      line-height: 48px;
     }
   }
 }
