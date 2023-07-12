@@ -9,6 +9,7 @@
     color: var(--neutral-color-1);
     font-size: variables.$fs-20;
     text-transform: capitalize;
+    line-height: 30px;
     
     &::placeholder {
       color: var(--neutral-color-2);
@@ -34,6 +35,7 @@
   .a-input {
     font-size: variables.$fs-28;
     padding-inline: variables.$size-16;
+    line-height: 42px;
 
     &--with-border {
       font-size: variables.$fs-28;
@@ -46,6 +48,7 @@
   .a-input {
     font-size: variables.$fs-32;
     padding: variables.$size-12 variables.$size-18;
+    line-height: 48px;
 
     &--with-border {
       font-size: variables.$fs-32;
