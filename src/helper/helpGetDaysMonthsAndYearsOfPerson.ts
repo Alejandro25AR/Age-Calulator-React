@@ -17,11 +17,12 @@ function getYearsOfPerson(yearOfBirth:number) {
 /**
  * This works by calculating the number of months a person has, the months from 1 - 12.
  * @param monthOfBirth - The month of birth of the person
+ * @param birthdayHasPassed - It allows us to know if the birthday has passed or not.
  * @returns
  *  - months: number of months after month birthday,
  *  - accumulatedYear: This number determines if another birthday year has passed.
  */
-function getMonthsOfPerson(monthOfBirth:number) {
+function getMonthsOfPerson(monthOfBirth:number, birthdayHasPassed:boolean) {
   const currentMonth = new Date().getMonth()+1;
   let differenceOfMonths = currentMonth - monthOfBirth;
   
@@ -29,6 +30,14 @@ function getMonthsOfPerson(monthOfBirth:number) {
     differenceOfMonths = MONTHS_OF_THE_YEAR + differenceOfMonths;
     return { months:differenceOfMonths, accumulatedYear: -1};
   } 
+    
+  if(differenceOfMonths === 0 && birthdayHasPassed) {
+    return { months:0, accumulatedYear: 0 };
+  }
+
+  if(differenceOfMonths === 0 && !birthdayHasPassed) {
+    return { months:12, accumulatedYear: -1 };
+  }
 
   return { months:differenceOfMonths, accumulatedYear: 0};
 }
@@ -72,7 +81,8 @@ function helpGetDaysMonthsAndYearsOfPerson(day:number,month:string,year:number) 
   const numberMonth = helpGetNumberMonth(month);
 
   const daysPerson   = getDaysOfPerson(day);
-  const monthsPerson = getMonthsOfPerson(numberMonth);
+  const birthdayHasPassed = daysPerson.accumulatedMonth=== -1 ? false : true;
+  const monthsPerson = getMonthsOfPerson(numberMonth, birthdayHasPassed);
   const yearsPerson  = getYearsOfPerson(year);
 
   return {
